@@ -1,0 +1,227 @@
+/*
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+- Very Dark Grayish Blue: hsl(217, 19%, 35%)
+- Desaturated Dark Blue: hsl(214, 17%, 51%)
+- Grayish Blue: hsl(212, 23%, 69%)
+- Light Grayish Blue: hsl(210, 46%, 95%)
+*/
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Manrope', sans-serif;
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+    background: hsl(210, 46%, 95%);
+    font-size: 13px;
+}
+
+.container {
+    width: 320px;
+    background: white;
+    border-radius: 1em;
+}
+
+.drawer-img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1rem;
+}
+
+.container-left {
+    height: 200px;
+}
+
+.container-right {
+    padding: 2.5em;
+    padding-bottom: 1em;
+}
+
+p.title {
+    color: hsl(217, 19%, 35%);
+    font-weight: bold;
+    line-height: 1.5em;
+    font-size: 1.2rem;
+    margin-top: 0;
+}
+
+p.desc {
+    color: hsl(214, 17%, 51%);
+    font-size: 1rem;
+    line-height: 1.8em;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2em;
+}
+
+.hide {
+    display: none;
+}
+
+.avatar-img {
+    height: 2.5em;
+    width: 2.5em;
+    border-radius: 50%;
+}
+
+p.name {
+    color: hsl(217, 19%, 35%);
+    font-weight: bold;
+    margin: 0;
+}
+
+p.date {
+    color: hsl(212, 23%, 69%);
+    font-weight: normal;
+    margin: 0;
+    margin-top: .2em;
+}
+
+.share-svg {
+    padding: .5em;
+    background: hsl(210, 46%, 95%);
+    border-radius: 50%;
+    margin-left: 2em;
+    margin-top: .3em;
+}
+
+.share-svg:hover {
+    background:hsl(212, 23%, 69%);
+}
+
+.share {
+    display: none;
+    background: hsl(217, 19%, 35%);
+    margin: 0;
+    padding: 1em 2em;
+    border-bottom-left-radius: .5em;
+    border-bottom-right-radius: .5em;
+    justify-content: left;
+}
+
+.show {
+    display: flex;
+}
+
+.popup-title {
+    color: hsl(212, 23%, 69%);
+    text-transform: uppercase;
+    letter-spacing: .3em;;
+    padding: .5em;
+}
+
+.icon {
+    height: 1.5em;
+    width: 1.5em;
+    padding: .5em;
+}
+
+
+.close-svg {
+    background: #6a7d95;
+    text-align: right;
+    margin-left: 4.3em;
+    padding: .5em;
+    border-radius: 50%;
+    margin-top: .3em;
+    fill: white;
+}
+
+@media (min-width: 950px) {
+    body {
+        font-size: 16px;
+    }
+    
+    .container {
+        display: flex;
+        width: 700px;
+        height: 275px;
+        position: relative;
+    }
+
+    .container-left {
+        height: auto;
+    }
+
+    .drawer-img {
+        height: 100%;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: .5em;
+        object-fit: cover;
+    }
+
+    .container-right {
+        width: 60%;
+        padding: 1.5em 2em;
+        padding-bottom: 0;
+        margin-right: .8em;
+    }
+
+    p.title {
+        margin: 0;
+        font-size: 1.4rem;
+    }
+
+    p.desc {
+
+        font-size: .9rem;
+    }
+
+    .avatar-info p {
+        font-size: .9rem;
+        padding-left: 1em;
+        padding-top: .1em;
+        margin-right: 5em;
+    }
+
+    .flex {
+        justify-content: left;
+        margin-top: 1.5em;
+    }
+
+    .hide {
+        display: flex;
+    }
+
+    .share-svg {
+        margin-left: 6em;
+    }
+
+    .share {
+        z-index: 1;
+        position: absolute;
+        top: 120px;
+        right: -30px;
+        width: 160px;
+        height: 30px;
+        padding: .8em 2em;
+        border-radius: .8em;
+    }
+
+    .popup-title {
+        padding: .5em;
+        font-size: 1rem;
+    }
+    
+    .icon {
+        height: 1em;
+        width: 1em;
+        padding: .3em;
+        padding-top: .5em;
+    }
+    
+    .close-svg {
+        display: none;
+    }
+}
